@@ -25,7 +25,9 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
+        working-directory: ./beta_test_drive/
 
       - name: Run tests
         run: flutter drive -d macos --target=test_driver/app.dart --suppress-analytics --dart-entrypoint-args="" #--verbose #-a="Some test name"
+        working-directory: ./beta_test_drive/
 
