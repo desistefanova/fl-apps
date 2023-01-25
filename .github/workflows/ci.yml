@@ -10,49 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  MacOS-Flutter-Beta:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
-
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: 'beta'
-
-      - name: Enable Flutter Desktop support
-        run: flutter config --enable-macos-desktop
-
-      - name: Install dependencies
-        run: flutter pub get
-        working-directory: ./beta_test_drive/
-
-      - name: Run tests
-        run: flutter test integration_test/app_test.dart -d macos -j 1 --test-randomize-ordering-seed random --verbose -r expanded
-        working-directory: ./beta_test_drive/
-
-  MacOS-Flutter-Stable:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
-
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-
-      - name: Enable Flutter Desktop support
-        run: flutter config --enable-macos-desktop
-
-      - name: Install dependencies
-        run: flutter pub get
-        working-directory: ./beta_test_drive/
-
-      - name: Run tests
-        run: flutter test integration_test/app_test.dart -d macos -j 1 --test-randomize-ordering-seed random --verbose -r expanded
-        working-directory: ./beta_test_drive/
-
-  Windows-Flutter-Beta:
+  Windows-Flutter-Stable:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
@@ -60,7 +18,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: 'beta'
+          channel: 'stable'
 
       - name: Enable Flutter Desktop support
         run: flutter config --enable-windows-desktop

@@ -232,7 +232,7 @@ packages:
     source: hosted
     version: "1.2.1"
   test_api:
-    dependency: "direct dev"
+    dependency: transitive
     description:
       name: test_api
       sha256: ad540f65f92caa91bf21dfc8ffb8c589d6e4dc0c2267818b4cc2792857706206
@@ -272,4 +272,4 @@ packages:
     source: hosted
     version: "3.0.1"
 sdks:
-  dart: ">=2.18.6 <4.0.0"
+  dart: ">=2.19.0 <4.0.0"
