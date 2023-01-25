@@ -1,11 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-
-// void main() {
-//   tests.main();
-// }
+import '../test/widget_test.dart' as tests;
 
 void main() {
-  test('Configuration can be created', () {
-    print("Test run");
-  });
+  tests.main();
 }
