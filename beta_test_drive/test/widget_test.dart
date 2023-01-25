@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-void main() {
-  test('Configuration can be created', () {
+Future<void> main() async {
+  test('Configuration can be created', () async {
     print("Test run");
   });
 }
