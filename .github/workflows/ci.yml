@@ -28,7 +28,7 @@ jobs:
         working-directory: ./beta_test_drive/
 
       - name: Run tests
-        run: flutter test integration_test/app_test.dart -d macos -j 1 --test-randomize-ordering-seed random --verbose
+        run: flutter test integration_test/app_test.dart -d macos -j 1 --test-randomize-ordering-seed random --verbose -r expanded
         working-directory: ./beta_test_drive/
 
   MacOS-Flutter-Stable:
@@ -49,7 +49,7 @@ jobs:
         working-directory: ./beta_test_drive/
 
       - name: Run tests
-        run: flutter test integration_test/app_test.dart -d macos -j 1 --test-randomize-ordering-seed random --verbose
+        run: flutter test integration_test/app_test.dart -d macos -j 1 --test-randomize-ordering-seed random --verbose -r expanded
         working-directory: ./beta_test_drive/
 
   Windows-Flutter-Beta:
@@ -70,5 +70,5 @@ jobs:
         working-directory: ./beta_test_drive/
 
       - name: Run tests
-        run: flutter test integration_test/app_test.dart -d windows -j 1 --test-randomize-ordering-seed random
+        run: flutter test integration_test/app_test.dart -d windows -j 1 --test-randomize-ordering-seed random -r expanded
         working-directory: ./beta_test_drive/
